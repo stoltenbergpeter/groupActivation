@@ -89,7 +89,7 @@ if (window.location.hash) {
     var queryStringData = {
         response_type: "token",
         client_id: CLIENT_ID,
-        redirect_uri: "https://accumulated5e1b627feea.z19.web.core.windows.net/amfam/greeting.html"
+        redirect_uri: "https://stoltenbergpeter.github.io/groupActivation/agentgreeting.html"
     }
     window.localStorage.clear();
 
@@ -102,7 +102,7 @@ function reAuth() {
     var queryStringData = {
         response_type: "token",
         client_id: CLIENT_ID,
-        redirect_uri: "https://accumulated5e1b627feea.z19.web.core.windows.net/amfam/greeting.html"
+        redirect_uri: "https://stoltenbergpeter.github.io/groupActivation/agentgreeting.html"
     }
     window.localStorage.clear();
 
