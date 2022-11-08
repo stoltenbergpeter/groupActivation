@@ -108,6 +108,36 @@ function reAuth() {
 
   window.location.replace(`https://login.${ENVIRONMENT}/oauth/authorize?` + jQuery.param(queryStringData));
 }
+function executeworkflowB() {
+        $.ajax({
+            url: `https://api.${ENVIRONMENT}/api/v2/flows/executions`, 
+            type: "POST",
+            contentType: 'application/json',
+            data: JSON.stringify({
+                "flowId": "d22e745e-1de7-43ff-8ac1-a35597bdc93f"
+            }),
+            dataType: 'json',
+            async: true,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'bearer ' + token);
+            },
+            success: function (result, status, xhr) {
+                console.log(result);
+  
+                const obj = JSON.parse(JSON.stringify(result));
+  
+  
+            },
+            error: function (result, status, xhr) {
+                console.log(result);
+                var obj = JSON.parse(JSON.stringify(result));
+                console.log(obj);
+                console.log(status);
+                //reAuth();
+  
+            }
+        });
+    }
 function executeworkflowA() {
         $.ajax({
             url: `https://api.${ENVIRONMENT}/api/v2/flows/executions`, 
