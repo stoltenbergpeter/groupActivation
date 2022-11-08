@@ -113,10 +113,10 @@ function executeworkflow() {
           url: `https://api.${ENVIRONMENT}/api/v2/flows/executions
           type: "POST",
           contentType: 'application/json',
-          data: JSON.stringify([{
+          data: JSON.stringify({
                     "flowId": "67230dc0-5838-450e-9b58-845e61e15949"
                   }
-              ]),
+              ),
           dataType: 'json',
           async: true,
           beforeSend: function (xhr) {
