@@ -108,7 +108,7 @@ function reAuth() {
 
   window.location.replace(`https://login.${ENVIRONMENT}/oauth/authorize?` + jQuery.param(queryStringData));
 }
-function executeworkflow() {
+function executeworkflowA() {
         $.ajax({
             url: `https://api.${ENVIRONMENT}/api/v2/flows/executions`, 
             type: "POST",
