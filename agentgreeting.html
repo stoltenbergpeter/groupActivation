@@ -3,7 +3,13 @@
 <html>
 <head>
     <style>
-
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green; 
+}
 .button {
   border: none;
   color: white;
@@ -55,9 +61,12 @@
 
     <!-- HTML !-->
 
-    <input class = "button1" type = "button" onclick = "executeworkflow()" value = "Branch A">  
-    <input class = "button2" type = "button" onclick = "executeworkflow()" value = "Branch B"> 
+ <div style = "font-family:Apple Chancery, cursive	;">Good Morning, Peter. What Branch will you be at today?</div>
     
+<div class="center">
+      <input class = "button1" type = "button" onclick = "executeworkflow()" value = "Branch A">  
+    <input class = "button2" type = "button" onclick = "executeworkflow()" value = "Branch B"> 
+</div>
 
 
 
