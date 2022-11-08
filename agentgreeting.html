@@ -4,44 +4,41 @@
 <head>
     <style>
 
-
-/* CSS */
-.button-83 {
-  appearance: button;
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #fff, #f8eedb);
-  border: 0 solid #e5e7eb;
-  border-radius: .5rem;
-  box-sizing: border-box;
-  color: #482307;
-  column-gap: 1rem;
-  cursor: pointer;
-  display: flex;
-  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 100%;
-  font-weight: 700;
-  line-height: 24px;
-  margin: 0;
-  outline: 2px solid transparent;
-  padding: 1rem 1.5rem;
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
   text-align: center;
-  text-transform: none;
-  transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.button-83:active {
-  background-color: #f3f4f6;
-  box-shadow: -1px 2px 5px rgba(81,41,10,0.15),0px 1px 1px rgba(81,41,10,0.15);
-  transform: translateY(0.125rem);
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
 }
 
-.button-83:focus {
-  box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
 }
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
 </style>
     <meta charset="utf-8" />
     <title></title>
@@ -54,11 +51,12 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script type = "text/javascript" src="greeting.js"></script> <!---- dev -->
 
-    <center><img id="logo" src="https://www.amfam.com/-/media/images/amfam/header/amfamlogov12021.svg?la=en&hash=9F5B14B58DD83F76C29688F2FCEB4218" alt="Agent Greeting"></center>
+    <center><img id="logo" src="https://t3.ftcdn.net/jpg/02/21/28/00/360_F_221280023_cqXBxKJr0ibEJlljlGRGfL309Ke47mGa.jpg" alt="Agent Greeting"></center>
 
     <!-- HTML !-->
-<button class="button-83" role="button">Button 83</button>
-    <input class = "button-83" type = "button" onclick = "executeworkflow()" value = "Displaysjj">  
+
+    <input class = "button1" type = "button" onclick = "executeworkflow()" value = "Branch A">  
+    <input class = "button2" type = "button" onclick = "executeworkflow()" value = "Branch B"> 
     
 
 
