@@ -109,38 +109,35 @@ function reAuth() {
   window.location.replace(`https://login.${ENVIRONMENT}/oauth/authorize?` + jQuery.param(queryStringData));
 }
 function executeworkflow() {
-      $.ajax({
-          url: `https://api.${ENVIRONMENT}/api/v2/flows/executions
-          type: "POST",
-          contentType: 'application/json',
-          data: JSON.stringify({
-                    "flowId": "67230dc0-5838-450e-9b58-845e61e15949"
-                  }
-              ),
-          dataType: 'json',
-          async: true,
-          beforeSend: function (xhr) {
-              xhr.setRequestHeader('Authorization', 'bearer ' + token);
-          },
-          success: function (result, status, xhr) {
-              console.log(result);
-
-              const obj = JSON.parse(JSON.stringify(result));
-              conversationListener(userConversationsTopic);
-
-          },
-          error: function (result, status, xhr) {
-              console.log(result);
-
-              var obj = JSON.parse(JSON.stringify(result));
-              console.log(obj);
-              console.log(status);
-              reAuth();
-
-          }
-      });
-  }
-}
+        $.ajax({
+            url: `https://api.${ENVIRONMENT}/api/v2/flows/executions`, 
+            type: "POST",
+            contentType: 'application/json',
+            data: JSON.stringify({
+                "flowId": "67230dc0-5838-450e-9b58-845e61e15949"
+            }),
+            dataType: 'json',
+            async: true,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'bearer ' + token);
+            },
+            success: function (result, status, xhr) {
+                console.log(result);
+  
+                const obj = JSON.parse(JSON.stringify(result));
+  
+  
+            },
+            error: function (result, status, xhr) {
+                console.log(result);
+                var obj = JSON.parse(JSON.stringify(result));
+                console.log(obj);
+                console.log(status);
+                //reAuth();
+  
+            }
+        });
+    }
 
 function createChannel() {
   $.ajax({
