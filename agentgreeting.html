@@ -7,18 +7,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  border: 3px solid green; 
+  height: 100px;
+  width:500px;
+  border: 1px solid green; 
 }
 .button {
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 32px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 40px;
+  margin: 8px 8px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -26,7 +27,7 @@
 .button1 {
   background-color: white; 
   color: black; 
-  border: 2px solid #4CAF50;
+  border: none;
 }
 
 .button1:hover {
@@ -37,11 +38,11 @@
 .button2 {
   background-color: white; 
   color: black; 
-  border: 2px solid #008CBA;
+  border: none;
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color: #4CAF50;
   color: white;
 }
 
@@ -57,16 +58,22 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script type = "text/javascript" src="greeting.js"></script> <!---- dev -->
 
-    <center><img id="logo" src="https://t3.ftcdn.net/jpg/02/21/28/00/360_F_221280023_cqXBxKJr0ibEJlljlGRGfL309Ke47mGa.jpg" alt="Agent Greeting"></center>
+   
 
     <!-- HTML !-->
-
- <div style = "font-family:Apple Chancery, cursive	;">Good Morning, Peter. What Branch will you be at today?</div>
+<br/><br/>
+  <center><div style = "font-family:Apple Chancery, cursive	;">Good Morning, Peter. What Branch will you be at today?</div> <center><br/>
     
 <div class="center">
-      <input class = "button1" type = "button" onclick = "executeworkflow()" value = "Branch A">  
-    <input class = "button2" type = "button" onclick = "executeworkflow()" value = "Branch B"> 
+      <input class = "button1" type = "button" onclick = "executeworkflowA()" value = "Branch A">  
+  
 </div>
+<br/>
+<div class="center">
+     
+    <input class = "button2" type = "button" onclick = "executeworkflowB()" value = "Branch B"> 
+</div>
+
 
 
 
