@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -7,7 +6,7 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  width:300px;
+  width:500px;
   border: 1px solid green; 
 }
 .button {
@@ -55,24 +54,34 @@
     <!-- Include the CJS SDK -->
     <script src="https://sdk-cdn.mypurecloud.com/javascript/123.0.0/purecloud-platform-client-v2.min.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-    <script type = "text/javascript" src="https://stoltenbergpeter.github.io/groupActivation/greeting.js"></script> <!---- dev -->
+    <script type = "text/javascript" src="greeting.js"></script> <!---- dev -->
 
    
 
     <!-- HTML !-->
 <br/><br/>
-  <center><div style = "font-family:Apple Chancery, cursive	;">Good Morning, Peter. What Branch will you be at today?</div> <center><br/><br/>
+  <center><div style = "font-family:Apple Chancery, cursive	;">Good Morning, Peter. What Branch will you be at today?</div> <center><br/>
     
 <div class="center">
-      <input class = "button1" type = "button" onclick = "executeworkflowA()" value = "Branch A">  
+      <input class = "button1" type = "button" onclick = "getElementById('demo1').innerHTML='You are all set! Have a great day.'; executeworkflowA();" value = "Branch A">  
   
 </div>
 <br/>
 <div class="center">
      
-    <input class = "button2" type = "button" onclick = "executeworkflowB()" value = "Branch B"> 
+    <input class = "button2" type = "button" onclick = "getElementById('demo1').innerHTML='You are all set! Have a great day.';executeworkflowB();" value = "Branch B"> 
 </div>
 
+<!DOCTYPE html>
+
+
+
+<br/><br/><br/>
+  <center><div style = "font-family:Apple Chancery, cursive	;" id = "demo1"></div> <center><br/>
+    
+
+</body>
+</html>
 
 
 
